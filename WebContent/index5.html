@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="">
+<head>
+<meta charset="UTF-8">
+<title>Expressions And Directives</title>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+</head>
+<body>
+	<p>SPA = Single Page Application</p>
+
+	<textarea ng-model="name"></textarea>
+	
+	<div>Hello {{name}}</div>
+	<div>10 * 10 = {{10*10}}</div>
+	
+	
+	<!-- Initialize... -->
+	<div ng-init="language='AngularJs'">
+		Initialize...(ng-init) ::  {{language}}
+	</div>
+	or, -- Sets default for below input box
+	Your preferred language:<input ng-model="language">
+	
+	
+</body>
+</html>
+
+<!--  ng-bind and ng-model -->
+
+https://docs.angularjs.org/guide/

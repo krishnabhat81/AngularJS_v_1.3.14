@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="">
+<head>
+<meta charset="UTF-8">
+<title>ng-repeat</title>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+</head>
+<body>
+	--- ng-repeat ---
+	
+	<div ng-init="myFavLang=[{name: 'Java', extension:'.java'}, 
+	{name:'JavaScript', extension:'.js'},
+	{name:'C++', extension:'.cpp'}]">
+		
+		<p ng-repeat="lang in myFavLang">
+			Name: {{lang.name}}, Extension: {{lang.extension}}
+		</p>
+		
+	</div>
+	
+</body>
+</html>
+
+https://docs.angularjs.org/guide/

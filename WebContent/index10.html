@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="mainApp">
+<head>
+	<meta charset="UTF-8">
+	<title>AngularJs | Introduction To Routes</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular-route.js"></script>
+	<script src="js/controller.js"></script>
+</head>
+<body>
+	<h1>Routes</h1>
+	<p>What is displayed at which URL...</p>
+	
+	<p>http://www.example.com/#/books --  if someone bookmarked this page
+	and come back again --- which page to display</p>
+	
+	<hr />
+	
+	<p>Run page; go to console type.. window.location.hash="#/anotherPage"; then enter...</p>
+	<div ng-view></div>
+	
+	<hr />
+	<hr />
+	<p>More routing here...</p>
+	<hr />
+	
+	
+</body>
+</html>

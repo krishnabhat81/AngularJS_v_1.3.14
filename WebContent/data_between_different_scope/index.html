@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="mainApp">
+<head>
+	<meta charset="UTF-8">
+	<title>AngularJs | Data between different scope</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+	
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular-route.js"></script>
+	 -->
+	<script src="controller.js"></script>
+</head>
+<body>
+	<h1>Data between different scope</h1>
+	<p>Pass data between different scopes -  when we have lot of scopes -- will use services -- but see here simple</p>
+	
+	
+	<input type="text" ng-model="message">
+	<p ng-repeat="i in [1]">
+		<input type="text" ng-model="message" >
+		You wrote: {{message}}
+		<!-- {{i}} -->
+	</p>
+	[Outer] You wrote: {{message}}
+	{{i}} <!-- this line is not accessible -  no scope -->
+	
+	<p>1. Above problem: when we write something on outer input - affects all outputs => global like</p>
+	<p>2. If changing inside ng-repeat input affects only inside block - local</p>
+	
+	<hr />
+	
+	<p>So, how to how to fix: </p>
+	<p>We can remove scope of different variables at different</p>
+	<p>user - message.property</p>
+	
+	<input type="text" ng-model="message1.property">
+	<p ng-repeat="i in [1]">
+		<input type="text" ng-model="message1.property" >
+		You wrote: {{message1.property}}
+	</p>
+	[Outer] You wrote: {{message1.property}}
+	
+</body>
+</html>

@@ -1,0 +1,24 @@
+{
+	"records":[
+		{
+			"Name": "Krishna",
+			"Age": "29",
+			"color": "orange"
+		},
+		{
+			"Name": "John",
+			"Age": "26",
+			"color": "red"
+		},
+		{
+			"Name": "Ramesh",
+			"Age": "10",
+			"color": "blue"
+		},
+		{
+			"Name": "Anonymous",
+			"Age": "???",
+			"color": "red"
+		}
+	]
+}

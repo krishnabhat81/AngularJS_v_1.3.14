@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="helloApp">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+</head>
+<body ng-controller="employeesCtrl">
+	
+	<!-- Creating input component and attaching to ng-model -->
+	Search : <input type="text" ng-model="search"><br><br>
+	Search ng-bind: <input type="text" ng-model="searchBind"><br><br>
+	<b>Search Term:</b>{{search}}<br><br>
+	<!--Mapping input component-->
+	<span ng-bind="searchBind"></span>
+	<!--Mapping directly to variable-->
+	<span ng-bind="search"></span>
+
+	<br /><br />
+	<button ng-click="checkModel()">Check ng-model</button>
+
+	<br /><br />
+	<button ng-click="checkBind()">Check ng-bind</button>
+
+</body>
+
+<script>
+	//Creating Angular Module
+	var helloApp = angular.module('helloApp', []);
+
+	//Creating Controller with Data
+	helloApp.controller('employeesCtrl', function($scope) {
+	$scope.search="Enter Search Criteria";
+	$scope.searchBind="I am bind";
+
+	$scope.checkModel = function(){
+		console.log("Model: "+$scope.search);
+	};
+	$scope.checkBind = function(){
+		console.log("Bind: "+$scope.searchBind);
+	};
+});
+</script>
+
+</html>
+
+<!--  ng-bind and ng-model -->
